@@ -33,13 +33,15 @@
 
     <h2>Modelling the item to be cast</h2>
 
-    <p>I first started by modelling the object that I wanted to cast in Fusion 360, I will be making a candle holder:</p>
+    <p>I first started by modelling the object that I wanted to cast in Fusion 360, I will be making a candle holder:
+    </p>
 
     <p>Before modelling, I used a vernier caliper to measure the diameter of the candle.</p>
 
     <img src="IMAGES/3DCNC/candleholderfusion1.png" class="border" width=75%>
 
-    <p>I sketched two circles, the inner circle being the diameter of the candle I want to fit inside the candle holder.</p>
+    <p>I sketched two circles, the inner circle being the diameter of the candle I want to fit inside the candle holder.
+    </p>
 
     <p>The outer circle has a diameter of the inner circle + 2 * 2.5mm which is my desired wall thickness.</p>
 
@@ -49,7 +51,8 @@
 
     <img src="IMAGES/3DCNC/candleholderfusion3.png" class="border" width=75%>
 
-    <p>I followed this by extruding the area in between the two sketched circles to form the wall encompassing my candle</p>
+    <p>I followed this by extruding the area in between the two sketched circles to form the wall encompassing my candle
+    </p>
 
     <img src="IMAGES/3DCNC/candleholderfusion4.png" class="border" width=75%>
 
@@ -57,13 +60,45 @@
 
     <img src="IMAGES/3DCNC/candleholderfusion5.png" class="border" width=75%>
 
-    <p>I then used the revolve tool, using the sketch as the profile and the centre of the candle holder as the axis for the profile to be revolved around.</p>
+    <p>I then used the revolve tool, using the sketch as the profile and the centre of the candle holder as the axis for
+      the profile to be revolved around.</p>
 
-    <h2>Modelling the </h2>
+    <h2>Modelling the mold</h2>
 
-    <p></p>
+    <p>Now that I have modelled my candle holder, I'll model the mold. I'll start by sketching a square for a base </p>
 
-    <p></p>
+    <img src="IMAGES/3DCNC/moldcastfusion1.png" class="border" width=75%>
+
+    <p>I then extruded it by 5mm which will be the thickness of the my base</p>
+
+    <img src="IMAGES/3DCNC/moldcastfusion2.png" class="border" width=75%>
+
+    <p>I then inserted my previously made object as a component, aligning the two centres using the point to point move
+      tool</p>
+
+    <img src="IMAGES/3DCNC/moldcastfusion3.png" class="border" width=75%>
+
+    <p>Next, I sketched the walls of the mold on the X axis, angling their insides, this will make removal of the mold
+      later easier.</p>
+
+    <img src="IMAGES/3DCNC/moldcastfusion4.png" class="border" width=75%>
+
+    <p>I proceeded to do the same for the Y axis</p>
+
+    <img src="IMAGES/3DCNC/moldcastfusion5.png" class="border" width=75%>
+
+    <p>Following that I extruded all 4 profiles to create the surrounding walls.</p>
+
+    <img src="IMAGES/3DCNC/moldcastfusion6.png" class="border" width=75%>
+
+    <p>Now that I have modelled my mold, I can now generate the toolpath for milling it.</p>
+
+    <h2>Generating the toolpath using Fusion 360</h2>
+
+    <p>We'll head to the manufacturing tab of Fusion 360, click on the design box and it'll open a drop down menu, click
+      on the word manufacture to select the manufacturing tab.</p>
+
+    <img src="IMAGES/3DCNC/manufacturingtab.png" class="border" width=75%>
 
   </div>
 
