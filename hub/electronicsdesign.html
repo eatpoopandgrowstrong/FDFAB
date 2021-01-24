@@ -285,7 +285,7 @@
 
             <img src="IMAGES/ED/failedexamplencviewer.png" class="border" width=60%>
 
-            <p>As can be seen, the drill bit is cutting multiple times on </p>
+            <p>As can be seen, the drill bit is cutting 2 outlines.</p>
 
             <p>We now have to fix our outline PNG.</p>
 
@@ -322,18 +322,22 @@
 
             <p>After checking with ncviewer, we can now mill our PCB.</p>
 
-            <h2>Milling my first PCB</h2>
+            <h2>Milling my PCB</h2>
 
-            <p>Milling the PCB is easy, </p>
-
-
+            <p>Milling the PCB is easy, upload the .nc file of the traces and mill them followed by the outline.
+                Remember to keep the X and Y positions the same for both files, only changing the Z reading when
+                changing the milling bit for the traces to the outline. If the X and Y are changed, the origin for the
+                outline will be changed and can result in the outline and traces files not being aligned, resulting in
+                cut off traces due to insufficient spacing.</p>
 
 
             <h2>Rectifying my PCB outline</h2>
 
-            <p>In order to fix the issue</p>
+            <p>When cutting my board, some of the traces on the front were cut off due to insufficient spacing</p>
 
-            <h2>End copper board</h2>
+            <p>In order to fix the issue, I redrew the outline to be milled, leaving around 5mm between the edge of the board and the traces.</p>
+
+            <h2>End product</h2>
 
             <p>Here is my copper board after milling the traces. The cutting is pretty good, there are no burrs.</p>
 
