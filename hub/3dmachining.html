@@ -93,16 +93,39 @@
 
     <p>Now that I have modelled my mold, I can now generate the toolpath for milling it.</p>
 
-    <h2>Generating the toolpath using Fusion 360</h2>
+    <h2>Generating the toolpath using Fusion 360 and installing the post processor</h2>
 
     <p>We'll head to the manufacturing tab of Fusion 360, click on the design box and it'll open a drop down menu, click
       on the word manufacture to select the manufacturing tab.</p>
 
     <img src="IMAGES/3DCNC/manufacturingtab.png" class="border" width=75%>
 
-    <p>We will also need to </p>
+    <p>We will also need to install the StepCraft Post Processor, head to https://cam.autodesk.com/hsmposts and search
+      for "Stepcraft"</p>
+
+    <img src="IMAGES/3DCNC/download.png" class="border" width=75%>
+
+    <p>We'll hit download which will download the stepcraft.cps file.</p>
+
+    <p>In manufacturing, we'll begin our setup process since we need a valid toolpath in order use the post processor.
+    </p>
+
+    <p>We'll check the appropriate settings for our set up, for instance, our model which we want to mill out.</p>
+
+
+    <p>In order to obtain our .nc file which we can run on our stepcraft autorouter, we'll need to run our toolpath
+      through the post processor.</p>
 
     <p></p>
+
+    <h2>Simulating the toolpath</h2>
+
+    <p>We can view the raw toolpath in Fusion 360 as shown earlier, but in order to view the .NC file's toolpath, we can
+      either use camotics or NCviewer.</p>
+
+    <p>The toolpath is pretty messy and I've had better luck with </p>
+
+    <img src="IMAGES/3DCNC/camoticsview.png" class="border" width=75%>
 
 
   </div>

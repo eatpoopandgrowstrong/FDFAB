@@ -43,18 +43,56 @@
 
     <p>To start, I'll modify my program that I made from the embedded programming segment.</p>
 
+    <!--
     <p>Instead of printing out a string, I'll print out an integer instead. This will make it simpler for processing to understand</p>
 
-    <!--<img src="IMAGES/InterfaceAndApplicationsProgramming/ChangingStringtosmallerstring.png" width=75% class="border">
+    --<img src="IMAGES/InterfaceAndApplicationsProgramming/ChangingStringtosmallerstring.png" width=75% class="border">
     -->
     <p></p>
 
+    <p>I must admit that I don't fully understand the code that I wrote to create this janky imitation of Mr Chew's
+      light bulb.</p>
 
-    <p>Draw an ellipse </p>
+    <p>In this case, processing uses Java, which is rather similar to C</p>
 
+    <p>I primarily referred to the examples included with processing to write it as well as Mr Chew's examples shown.
+    </p>
 
+    <p>Here it is:</p>
+
+    <p>Insert video and code here</p>
+
+    <p>When I first start the program, </p>
+
+    <h3>Modifying the program</h3>
+
+    <p>When starting up the program, the program only runs the size() command, to create a window with the resolution
+      stated 720p.</p>
+
+    <p>As a result, an image does not show up on the screen until the LED is first switched on. To make it more
+      'realistic', I simply modified the program to load the unlit light bulb at the start.</p>
+
+    <p>Here is a video showing the change:</p>
+
+    <p>Insert video here:</p>
+
+    <p>One thing that I haven't exactly figured out is converting the exact data stream through Serial from Arduino to
+      Processing.</p>
+
+    <p>I suspect that it's an error due to the different data types. For instance, when I do a port.print(0); it
+      translates to a '48' in processing. I figured this out by using the println command to print the value of the
+      input when I was debugging why my code didn't work and the bulbs were not loading in. Using my google-fu, 48 is
+      the DEC equivalent of the char '0'. I'll have to figure this out and redo it but for now the code works.</p>
+
+    <p>Another thing that I'll have to figure out is the scaling of the image. The light bulbs are always cut short at
+      bottom. Perhaps I'll have to resize the image to fit the entire image in the window.</p>
+
+    <p>Insert images here</p>
 
 
   </div>
+
+
+
 
 </body>

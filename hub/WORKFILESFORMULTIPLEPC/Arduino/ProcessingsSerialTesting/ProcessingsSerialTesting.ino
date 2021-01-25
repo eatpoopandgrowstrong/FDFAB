@@ -31,7 +31,12 @@ void loop() {
   LEDState = 1;
   digitalWrite(LED, HIGH);
   //port.println("1");
-  port.print(1);
+  port.print(1.DEC);
+  
+  
+  
+  
+  
   }
   else if((digitalRead(PushButton) == LOW) && (LEDState == 1)){
 
@@ -42,7 +47,7 @@ void loop() {
   LEDState = 0;
   digitalWrite(LED, LOW);
   //port.println("0");
-  port.print(0);
+  port.print(0,DEC);
     
   }
   

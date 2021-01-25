@@ -9,13 +9,13 @@ int val;
 
 void setup(){
   
-  img = loadImage("lightbulboff.png");
-  i = loadImage("lightbulbon.png");
+  ImageAlpha = loadImage("lightbulboff.png");
+  ImageBravo = loadImage("lightbulbon.png");
   
   
   //myPort = new Serial(this, Serial.list ()[1],9600);
-  size (1920,1080);
- 
+  size (1280,780);
+ image(ImageBravo, 0, 0);
  
   printArray(Serial.list());
   String portName = Serial.list()[1];
@@ -33,12 +33,12 @@ void draw(){
    
    if(val == 48){
    //fill(0);
-   image(img, 0, 0);
+   image(ImageAlpha, 0, 0);
    println("0");
   }
   else if(val == 49){
    //fill(255,0,0);  
-   image(img, 0, 0);
+   image(ImageBravo, 0, 0);
    println("1");
   }
   
