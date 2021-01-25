@@ -113,15 +113,36 @@
 
 
     <p>Something to note when viewing the simulation of the raw toolpath in Fusion 360 is that not all tool collisions
-      are 'real'. Here's an image of the tool library screen: </p>
+      are 'real'. Here's an image of the tool library screen: </p>  
 
     <img src="IMAGES/3DCNC/flutelength.png" class="border" width=75%>
 
     <p>As can be seen, the 3mm flat end mill only has a flute length of 12mm which is really short. This is the reason
-      why there are so many collisions shown, as long as we ensure the actual flute length is larger than what we want to cut.</p>
+      why there are so many collisions shown, as long as we ensure the actual flute length is larger than what we want
+      to cut.</p>
 
     <p>In order to obtain our .nc file which we can run on our stepcraft autorouter, we'll need to run our toolpath
       through the post processor.</p>
+
+    <h2>Installing our post processsor</h2>
+
+    <img src="IMAGES/3DCNC/postprocessing1.png" class="border" width=75%>
+
+    <p>Once in the post processing window, click on the 'setup' button. This will open a file explorer window</p>
+
+    <img src="IMAGES/3DCNC/postprocessing.png" class="border" width=75%>
+
+    <img src="IMAGES/3DCNC/postprocessing2.png" class="border" width=75%>
+
+    <p>Click on the file explorer icon to view the address as text, right click and copy the address.</p>
+
+    <img src="IMAGES/3DCNC/postprocessing3.png" class="border" width=75%>
+
+    <p>Then open up another file explorer window and paste the address, followed by copying and pasting the .cps file into the folder.</p>
+
+    <img src="IMAGES/3DCNC/postprocessing4.png" class="border" width=75%>
+
+    <p>Once that's done, we're done installing our post processor and can now select it.</p>
 
     <p>This is where we'll change our </p>
 
