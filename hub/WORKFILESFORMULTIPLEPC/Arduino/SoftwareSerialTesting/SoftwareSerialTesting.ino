@@ -1,19 +1,50 @@
 #include <SoftwareSerial.h>
 
-SoftwareSerial MySerial(10,11)
+#define rx 2
+#define tx 1
+
+SoftwareSerial port(rx,tx);
+
+const int PushButton = 3;
+const int LED = 4;
+
+int LEDState = 0;
 
 void setup() {
   // put your setup code here, to run once:
 
-  Serial.begin(9600);
+  port.begin(9600);
+  pinMode(PushButton , INPUT);
+  pinMode(LED , OUTPUT);
 
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
 
-  if(MySerial.available()){
-    Serial.write(MySerial.read();
+  if((digitalRead(PushButton) == LOW) && (LEDState == 0)){
+
+    delay(20);
+    while(digitalRead(PushButton) == LOW);
+    delay(20);
+
+  LEDState = 1;
+  digitalWrite(LED, HIGH);
+  port.println("LED has been turned ON");
+    
   }
+  else if((digitalRead(PushButton) == LOW) && (LEDState == 1)){
+
+    delay(20);
+    while(digitalRead(PushButton) == LOW);
+    delay(20);
+
+  LEDState = 0;
+  digitalWrite(LED, LOW);
+  port.println("LED has been turned OFF");
+
+    
+  }
+  
 
 }
