@@ -113,17 +113,28 @@
     <p>We'll check the appropriate settings for our set up, for instance, our model which we want to mill out.</p>
 
 
+    <p>Something to note when viewing the simulation of the raw toolpath in Fusion 360 is that not all tool collisions
+      are 'real'. Here's an image of the tool library screen: </p>
+
+    <img src="IMAGES/3DCNC/flutelength.png" class="border" width=75%>
+
+    <p>As can be seen, the 3mm flat end mill only has a flute length of 12mm which is really short. This is the reason
+      why there are so many collisions shown, as long as we ensure the actual flute length is larger than what we want to cut.</p>
+
     <p>In order to obtain our .nc file which we can run on our stepcraft autorouter, we'll need to run our toolpath
       through the post processor.</p>
 
-    <p></p>
+    <p>This is where we'll change our </p>
 
     <h2>Simulating the toolpath</h2>
 
     <p>We can view the raw toolpath in Fusion 360 as shown earlier, but in order to view the .NC file's toolpath, we can
       either use camotics or NCviewer.</p>
 
-    <p>The toolpath is pretty messy and I've had better luck with </p>
+    <p>The toolpath is pretty messy and there's better customisation of the view in Camotics so I'll fire it up this
+      time compared to others where I prefer ncviewer due to its simplicity.</p>
+
+    <p>Here's an image showing the final state of the material.</p>
 
     <img src="IMAGES/3DCNC/camoticsview.png" class="border" width=75%>
 
