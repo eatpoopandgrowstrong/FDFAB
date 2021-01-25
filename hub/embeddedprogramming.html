@@ -73,15 +73,37 @@
 
     <h2>Programming the ISP programmer</h2>
 
+    <p>We'll first start by openning Git Bash:</p>
+
     <img src="IMAGES/EMBEDDEDPROGRAMMING/GITBASH1.png" width=75%>
 
-    <img src="IMAGES/EMBEDDEDPROGRAMMING/part1.png" width=75%>
+    <p>We can check that our ISP programmer is working by connecting it using the ISP cable and running the command
+      "avrdude -p usbtiny -c t85"</p>
+
+    <img src="IMAGES/EMBEDDEDPROGRAMMING/GITBASH2.png" width=75%>
+
+    <p>As can be seen, the device has been successfully initialised. Now that we have checked that our Tiny85 is
+      working, we can now program it.</p>
+
+    <p>We'll start by openning up command prompt and call directory into the directory that we have our firmware
+      installed. </p>
+
+    <img src="IMAGES/EMBEDDEDPROGRAMMING/part1.png" width=75%>]
+
+    <p>Due to the firmware being in a folder with the same name, we can check that we are in the right folder by using
+      the dir command to list the files in the directory.</p>
 
     <img src="IMAGES/EMBEDDEDPROGRAMMING/part2.png" width=75%>
 
+    <p>We then run the 'make' command</p>
+
     <img src="IMAGES/EMBEDDEDPROGRAMMING/part3.png" width=75%>
 
+    <p>Followed by the 'make flash' command</p>
+
     <img src="IMAGES/EMBEDDEDPROGRAMMING/part4.png" width=75%>
+
+    <p>We can then run the make fuses command</p>
 
     <img src="IMAGES/EMBEDDEDPROGRAMMING/part5.png" width=75%>
 
@@ -226,9 +248,21 @@
 
     <br>
 
+    <p>Here is the code for a simple program where a button press switches on the LED:</p>
+
     <img src="IMAGES/EMBEDDEDPROGRAMMING/buttonLEDcode.png" width=75% class="border">
 
-    <p>Here is the code for a simple program where a button press switches on the LED</p>
+    <p>Since there is already a pullup resistor across my push button, by default the digitalRead will be HIGH since the
+      push button has been 'pulled up' to 5V. Hence, it producing a 5V reading when the button is inactive and a 0V
+      reading when pressed. Hence being active low</p>
+
+    <p>By reading in the voltage as boolean, it will either be high when the button isn't pressed, and low when the
+      button is pressed.</p>
+
+    <p>I am thus able to invert the state of the button using the !state, using digitalRead to cause the LED to turn on
+      when the button is pressed.</p>
+
+    <p>Here is a video showing the LED turning on when the button is pressed:</p>
 
     <video width=75% controls>
 
@@ -236,6 +270,6 @@
 
     </video>
 
-    
+
 
   </div>
