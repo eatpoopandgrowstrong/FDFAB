@@ -143,8 +143,8 @@
     <p>After quickly fabricating an IO board with 1 push button and 3 LEDs, I referred to the pinout for the tiny44 and
       identified the appropriate arduino pins which were connected to my push button and LEDs.</p>
 
-      
-    
+
+
 
     <h2>Code</h2>
 
@@ -259,6 +259,25 @@
         </code>
       </pre>
     </figure>
+
+
+    <p>The code be downloaded from <a href="projectdesignfiles.html">Project Design Files</a></p>
+
+    <p>The code is honestly really simple. Separate Functions for the Motor output and LEDs, using one global integer to
+      base their actions upon using switches.</p>
+
+    <p>While I really hate to use delay, considering that there is only 1 input device and there are no other real time
+      devices, a small 10ms delay after the button has stopped being pressed works just fine. I think that it's
+      definitely possible to refactor the code to use a millis approach to avoid delay entirely. An alternative would be
+      to use the IR remote as planned which produces only 1 distinct code when a button is pressed with no need for
+      debouncing.</p>
+
+
+    <p>The analogWrite in the MotorFunction simply outputs a PWM signal which averages out, causing it to be an 'analog'
+      output. For instance at case 2, DCMOTOR2 analogwrites at 127 which is approximately half of 255, resulting in a
+      duty cycle of almost 50%.</p>
+
+    <p>The debouncing with while(digitalRead(GPIO1Button) == LOW); and the delay of 10ms works well</p>
 
 
 
