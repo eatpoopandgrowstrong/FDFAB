@@ -65,12 +65,14 @@
       <p>Something interesting to note here is that there are two options for the pin layout on the Arduino, either
         clockwise or anti clockwise</p>
 
-      <p>Insert image here of spencekonde pinout</p>
+        <img src="IMAGES/Electronics/Pinout.jpg" width=75%>
 
-      <p>As can be seen,</p>
+      <p>As can be seen, clockwise will result in the first arduino pin 0/A0 starting from pin 13.</p>
 
 
-      <h3>Testing the IO pins of my </h3>
+
+
+      <h3>Testing the IO pins of my microcontroller</h3>
 
       <p>Next I'll create a simple program to test the functionality of my IO pins.</p>
 
@@ -107,6 +109,7 @@
 
 
 
+      <h3>IR remote</h3>
 
       <p>I will be using the IRremote library https://github.com/Arduino-IRremote/Arduino-IRremote</p>
 
@@ -116,6 +119,7 @@
       <p>Refering to the documentation and the wikia example, the IRreceiver needs to be setup through the </p>
 
       <p>I'll create a decoder function for my IR receiver as a start. I will also call it in my main loop.</p>
+
 
 
       <p>For the moment, I'll just use a breadboard to demostrate and test the functionality of the IR receiver and
@@ -129,8 +133,12 @@
 
       <p>Update: Turns out the Iremote library that I was planning on using is too large for the tiny44's flash, I'll
         have to resort to quickly fabricating a physical push button and LED set up to fufil the IO requirements. I
-        certainly did not see this issue coming, I probably should have checked the size of the library and the storage
+        certainly did not see this issue coming, I should have checked the size of the library and the storage
         available on the Tiny44. </p>
+
+      <h3>Rectifying the IO issue:</h3>
+
+      <p>After quickly fabricating an IO board with 1 push button and 3 LEDs, I</p>
 
 
 
