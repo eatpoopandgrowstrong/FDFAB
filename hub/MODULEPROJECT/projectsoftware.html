@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 
 <head>
   <title>
@@ -70,26 +70,34 @@
 
     <p>The IO pin will be set to toggle its logic level every 500ms, resulting in a flashing effect.</p>
 
-    <p>Insert video here</p>
+    <video width=75% controls>
 
-    <p></p>
+      <source src="VIDEOS/Board LED test actual.mp4" width=75%>
+
+    </video>
 
     <h3>Testing servo pins</h3>
 
     <p>Next I'll test my servo pins, I'll write a similar program, this time setting the position of the Servo to 0 degrees, a short delay, followed by moving to 90 degrees before delaying again and repeating the cycle.
 
-    <p></p>
+    <p>I probably won't be able to finish the actuation for the turkey feathers for the gas turbine mockup but I might as well as check its functionality.</p>
 
     <h3>DC Motor Testing</h3>
 
+    <p>I'll also test my DC motor by attaching two male dupont cables to its terminals:</p>
 
+    <video width=75% controls>
 
+      <source src="VIDEOS/DC Motor Test.mp4" width=75%>
+
+    </video>
+
+    <p>Due to no load being attached to the shaft of the motor, I can safely run it off the USB due to its low current consumption.</p>
 
 
 
 
     <p>I will be using the IRremote library https://github.com/Arduino-IRremote/Arduino-IRremote</p>
-
   
     <p>I'll start by creating a basic sketch for the IR receiver to work:</p>
 
@@ -106,7 +114,10 @@
 
 
 
-    <p>Update: Turns out the Iremote library that I was planning on using is too large for the tiny84's flash, I'll  </p>
+    <p>Update: Turns out the Iremote library that I was planning on using is too large for the tiny44's flash, I'll have to resort to quickly fabricating a physical push button and LED set up to fufil the IO requirements.  I certainly did not see this issue coming, I probably should have checked the size of the library and the storage available on the Tiny44. </p>
+
+    
+
 
 
 
@@ -134,4 +145,4 @@
 
   </div>
 
-</body>
+</body>>
