@@ -27,7 +27,8 @@
 
     <h1>Project Electronics</h1>
 
-        <p>In this part on project electronics, I will be covering the library for EAGLE and microcontroller that I will be using for my project.</p>
+    <p>In this part on project electronics, I will be covering the library for EAGLE and microcontroller that I will be
+      using for my project.</p>
 
     <h2>Library and Microcontroller choice</h2>
 
@@ -44,13 +45,15 @@
 
     <img src="IMAGES/Electronics/Sparkfunlibrary.png" width=75% class="border">
 
-    <p>Even though there are multiple libraries, I won't be installing all of them since it'll clutter up the part selection.</p>
+    <p>Even though there are multiple libraries, I won't be installing all of them since it'll clutter up the part
+      selection.</p>
 
     <p>I'll just be installing the SparkFun-IC-Microcontroller.lbr which will contain my attiny84 part.</p>
 
     <img src="IMAGES/Electronics/Sparkfunlibrary2.png" width=75% class="border">
 
-    <p>After downloading the library as a .zip file, 'unzip' it. I then copied 'SparkFun-IC-Microcontroller.lbr' to my Eagle library folder.</p>
+    <p>After downloading the library as a .zip file, 'unzip' it. I then copied 'SparkFun-IC-Microcontroller.lbr' to my
+      Eagle library folder.</p>
 
     <h2>Eagle</h2>
 
@@ -58,19 +61,20 @@
 
     <p>We can begin by inserting a frame into our schematic:</p>
 
-    <img src="IMAGES/Electronics/schematic1.png" width=75% >
+    <img src="IMAGES/Electronics/schematic1.png" width=75%>
 
     <p>To start, I'll insert the Tiny84 IC into my schematic. </p>
 
-    <img src="IMAGES/Electronics/schematic2.png" width=75% >
+    <img src="IMAGES/Electronics/schematic2.png" width=75%>
 
     <p>I then added my ISP header and did some basic nets such as the MOSI/MISO pins:</p>
 
-    <img src="IMAGES/Electronics/schematic3.png" width=75% >
+    <img src="IMAGES/Electronics/schematic3.png" width=75%>
 
-    <p>Afterwards, I proceeded to add the rest of my components such as the headers for which the DC motors and servo motor will connect to:</p>
+    <p>Afterwards, I proceeded to add the rest of my components such as the headers for which the DC motors and servo
+      motor will connect to:</p>
 
-    <img src="IMAGES/Electronics/schematic4.png" width=75% >
+    <img src="IMAGES/Electronics/schematic4.png" width=75%>
 
     <p>The DC motor </p>
 
@@ -78,43 +82,49 @@
 
     <p>After finishing my schematic, I swapped over to the board view and laid out my components: </p>
 
-    <img src="IMAGES/Electronics/board1.png" width=75% >
+    <img src="IMAGES/Electronics/board1.png" width=75%>
 
-    <p>I thickened the VCC and Ground traces to 24mil and had to rename some nets due to the inclusion of 0 ohm links. IF I didn't, Eagle would assume that the two nets were meant to be shorted together, showing up in the DRC as an error.</p>
+    <p>I thickened the VCC and Ground traces to 24mil and had to rename some nets due to the inclusion of 0 ohm links.
+      IF I didn't, Eagle would assume that the two nets were meant to be shorted together, showing up in the DRC as an
+      error.</p>
 
-    <img src="IMAGES/Electronics/shorted.png" width=37.5% >
+    <img src="IMAGES/Electronics/shorted.png" width=37.5%>
 
-    <img src="IMAGES/Electronics/renaming due to 0 ohm link.png" width=37.5% >
+    <img src="IMAGES/Electronics/renaming due to 0 ohm link.png" width=37.5%>
 
 
     <h3>Exporting to mods</h3>
 
-    <p>As can be seen in the previous image, due to my board almost taking up the entire copper blank (75mm x 50mm), I won't be cutting an outline, just the traces out.</p>
+    <p>As can be seen in the previous image, due to my board almost taking up the entire copper blank (75mm x 50mm), I
+      won't be cutting an outline, just the traces out.</p>
 
-    <p>I'll hide all the layers and just show the pads and top layer. Then simply export a 1000 DPI image in monochrome</p>
+    <p>I'll hide all the layers and just show the pads and top layer. Then simply export a 1000 DPI image in monochrome
+    </p>
 
-    <img src="IMAGES/Electronics/boardexport.png" width=75% >
+    <img src="IMAGES/Electronics/boardexport.png" width=75%>
 
     <p>The exported image:</p>
 
-    <img src="IMAGES/Electronics/tiny84traces.png" width=75% >
+    <img src="IMAGES/Electronics/tiny84traces.png" width=75%>
 
 
     <h2>Mods configuration</h2>
 
-    <p>After exporting the image, I can now import it into mods : https://skeatz.github.io/mods/index.html (Right click -> Open Server Program -> scroll down for 'Mill 2D PCB PNG')</p>
+    <p>After exporting the image, I can now import it into mods : https://skeatz.github.io/mods/index.html (Right click
+      -> Open Server Program -> scroll down for 'Mill 2D PCB PNG')</p>
 
-    <p>I'll import my image that I exported from the previous section with the 'SELECT PNG FILE' button ,it opens up a file explorer prompt which is then used to select the previously made image:</p>
+    <p>I'll import my image that I exported from the previous section with the 'SELECT PNG FILE' button ,it opens up a
+      file explorer prompt which is then used to select the previously made image:</p>
 
-    <img src="IMAGES/Electronics/modsimport.png" width=75% class = "border">
+    <img src="IMAGES/Electronics/modsimport.png" width=75% class="border">
 
     <p>We'll then change and enter the appropriate settings for cutting traces:</p>
 
-    <img src="IMAGES/Electronics/modsconfigured.png" width=75% class = "border">
+    <img src="IMAGES/Electronics/modsconfigured.png" width=75% class="border">
 
     <p>Then hit the 'calculate' button, the .nc file should automatically start downloading:</p>
 
-    <img src="IMAGES/Electronics/modscalculated.png" width=75% class = "border">
+    <img src="IMAGES/Electronics/modscalculated.png" width=75% class="border">
 
 
     <p>Now that I have my .nc file, I can transfer it to the stepcraft for it to mill the board.</p>
@@ -122,11 +132,12 @@
 
     <h2>Board milling</h2>
 
-    <p>I copied over my .nc file onto the laptop connected to the stepcraft, I then set my X and Y followed by using the z level sensor to set Z.</p>
+    <p>I copied over my .nc file onto the laptop connected to the stepcraft, I then set my X and Y followed by using the
+      z level sensor to set Z.</p>
 
     <h2>Board soldering</h2>
 
-    <img src="IMAGES/Electronics/BOM.png" width=25% class = "border">
+    <img src="IMAGES/Electronics/BOM.png" width=25% class="border">
 
     <img src="IMAGES/Soldering/Soldering1.jpg" width=75%>
 
@@ -146,13 +157,15 @@
 
     <img src="IMAGES/Soldering/Soldering6.jpg" width=75%>
 
-    <p>I think that they're alright but might need either more solder to be applied in the future to have a stronger joint, preventing the header pins from breaking off</p>
+    <p>I think that they're alright but might need either more solder to be applied in the future to have a stronger
+      joint, preventing the header pins from breaking off</p>
 
-    <p>I'm quite happy with my soldering, compared with my previous boards, I was better during the flux application process which made things easier as well as cleaner due to my board not drowning in a pool of flux:</p>
+    <p>I'm quite happy with my soldering, compared with my previous boards, I was better during the flux application
+      process which made things easier as well as cleaner due to my board not drowning in a pool of flux:</p>
 
     <img src="IMAGES/Soldering/Soldering7.jpg" width=75%>
 
-    
+
 
 
 

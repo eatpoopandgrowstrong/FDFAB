@@ -1,148 +1,164 @@
 <<!DOCTYPE html>
 
-<head>
-  <title>
-    Project Software
-  </title>
+  <head>
+    <title>
+      Project Software
+    </title>
 
-  <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style.css">
 
-  <script src="../jquery-3.5.1.min.js"></script>
+    <script src="../jquery-3.5.1.min.js"></script>
 
-</head>
+  </head>
 
-<body>
+  <body>
 
-  <div id="nav-placeholder">
+    <div id="nav-placeholder">
 
-  </div>
+    </div>
 
-  <script>
-    $(function () {
-      $("#nav-placeholder").load("mpnav.html");
-    });
-  </script>
+    <script>
+      $(function () {
+        $("#nav-placeholder").load("mpnav.html");
+      });
+    </script>
 
-  <div style="margin-left:25%;padding:1px 16px;height:1000px;">
+    <div style="margin-left:25%;padding:1px 16px;height:1000px;">
 
-    <h1>Project Software</h1>
+      <h1>Project Software</h1>
 
-    <p>This is primarily a continuation from <a href="projectsoftware.html">Project Software</a> where I fabricated my board:</p>
+      <p>This is primarily a continuation from <a href="projectsoftware.html">Project Software</a> where I fabricated my
+        board:</p>
 
-    <p>Due to time constraints, I will be primarily focusing on getting my elementary input and output devices such as my IR Receiver/Remote and DC motor working first.</p>
+      <p>Due to time constraints, I will be primarily focusing on getting my elementary input and output devices such as
+        my IR Receiver/Remote and DC motor working first.</p>
 
-    <h2>Smoke Test</h2>
+      <h2>Smoke Test</h2>
 
-    <p>Before we can program the board, I'll run a quick smoke test to ensure that the board is recognisable/working by connecting it to my ISP programmer:</p>
+      <p>Before we can program the board, I'll run a quick smoke test to ensure that the board is recognisable/working
+        by connecting it to my ISP programmer:</p>
 
-    <p>Insert image of Tiny84 ISP connected to ISP programmer</p>
+      <p>Insert image of Tiny84 ISP connected to ISP programmer</p>
 
-    <p>Insert images of git bash here</p>
+      <p>Insert images of git bash here</p>
 
-    <p>I ran the command 'avrdude -c usbtiny -p t84':</p>
+      <p>I ran the command 'avrdude -c usbtiny -p t84':</p>
 
-    <img src="IMAGES/Electronics/SUCCEED2.png" width=75%>
+      <img src="IMAGES/Electronics/SUCCEED2.png" width=75%>
 
-    <p>As can be seen, I initally ran the command for the t84 instead of the t44 which we were using. It still showed that the board was working, showing that an AVR device was initialised with a signature. After rechecking my chip, I ran the proper command.</p>
+      <p>As can be seen, I initally ran the command for the t84 instead of the t44 which we were using. It still showed
+        that the board was working, showing that an AVR device was initialised with a signature. After rechecking my
+        chip, I ran the proper command.</p>
 
-    <p>Now that smoke test has been completed without any magic smoke and our t44 is responsive, we can now proceed onto programming the board.</p>
+      <p>Now that smoke test has been completed without any magic smoke and our t44 is responsive, we can now proceed
+        onto programming the board.</p>
 
 
 
-    <h2>Programming the Tiny84 board</h2>
+      <h2>Programming the Tiny84 board</h2>
 
-    <p>Now that the board works, we can start by creating a dummy program and burning the bootloader for the board, specifying settings such as the clock rate of the microcontroller.</p>
+      <p>Now that the board works, we can start by creating a dummy program and burning the bootloader for the board,
+        specifying settings such as the clock rate of the microcontroller.</p>
 
-    <p>Insert image here</p>
+      <p>Insert image here</p>
 
-    <p>Something interesting to note here is that there are two options for the pin layout on the Arduino, either clockwise or anti clockwise</p>
+      <p>Something interesting to note here is that there are two options for the pin layout on the Arduino, either
+        clockwise or anti clockwise</p>
 
-    <p>Insert image here of spencekonde pinout</p>
+      <p>Insert image here of spencekonde pinout</p>
 
-    <p>As can be seen,</p>
+      <p>As can be seen,</p>
 
 
-    <h3>Testing the IO pins of my </h3>
+      <h3>Testing the IO pins of my </h3>
 
-    <p>Next I'll create a simple program to test the functionality of my IO pins.</p>
+      <p>Next I'll create a simple program to test the functionality of my IO pins.</p>
 
-    <p>It's a simple program where the IO pin is connected to an LED and resistor in series. </p>
+      <p>It's a simple program where the IO pin is connected to an LED and resistor in series. </p>
 
-    <p>The IO pin will be set to toggle its logic level every 500ms, resulting in a flashing effect.</p>
+      <p>The IO pin will be set to toggle its logic level every 500ms, resulting in a flashing effect.</p>
 
-    <video width=75% controls>
+      <video width=75% controls>
 
-      <source src="VIDEOS/Board LED test actual.mp4" width=75%>
+        <source src="VIDEOS/Board LED test actual.mp4" width=75%>
 
-    </video>
+      </video>
 
-    <h3>Testing servo pins</h3>
+      <h3>Testing servo pins</h3>
 
-    <p>Next I'll test my servo pins, I'll write a similar program, this time setting the position of the Servo to 0 degrees, a short delay, followed by moving to 90 degrees before delaying again and repeating the cycle.
+      <p>Next I'll test my servo pins, I'll write a similar program, this time setting the position of the Servo to 0
+        degrees, a short delay, followed by moving to 90 degrees before delaying again and repeating the cycle.
 
-    <p>I probably won't be able to finish the actuation for the turkey feathers for the gas turbine mockup but I might as well as check its functionality.</p>
+      <p>I probably won't be able to finish the actuation for the turkey feathers for the gas turbine mockup but I might
+        as well as check its functionality.</p>
 
-    <h3>DC Motor Testing</h3>
+      <h3>DC Motor Testing</h3>
 
-    <p>I'll also test my DC motor by attaching two male dupont cables to its terminals:</p>
+      <p>I'll also test my DC motor by attaching two male dupont cables to its terminals:</p>
 
-    <video width=75% controls>
+      <video width=75% controls>
 
-      <source src="VIDEOS/DC Motor Test.mp4" width=75%>
+        <source src="VIDEOS/DC Motor Test.mp4" width=75%>
 
-    </video>
+      </video>
 
-    <p>Due to no load being attached to the shaft of the motor, I can safely run it off the USB due to its low current consumption.</p>
+      <p>Due to no load being attached to the shaft of the motor, I can safely run it off the USB due to its low current
+        consumption.</p>
 
 
 
 
-    <p>I will be using the IRremote library https://github.com/Arduino-IRremote/Arduino-IRremote</p>
-  
-    <p>I'll start by creating a basic sketch for the IR receiver to work:</p>
+      <p>I will be using the IRremote library https://github.com/Arduino-IRremote/Arduino-IRremote</p>
 
+      <p>I'll start by creating a basic sketch for the IR receiver to work:</p>
 
-    <p>Refering to the documentation and the wikia example, the IRreceiver needs to be setup through the </p>
 
-    <p>I'll create a decoder function for my IR receiver as a start. I will also call it in my main loop.</p>
-                                                  
+      <p>Refering to the documentation and the wikia example, the IRreceiver needs to be setup through the </p>
 
-    <p>For the moment, I'll just use a breadboard to demostrate and test the functionality of the IR receiver and remote combo as well as the code.</p>
+      <p>I'll create a decoder function for my IR receiver as a start. I will also call it in my main loop.</p>
 
-    <p>For the actual demostration, I'll use multiple Male to Female Dupont cables to jumper the IR receiver to the board.</p>
 
+      <p>For the moment, I'll just use a breadboard to demostrate and test the functionality of the IR receiver and
+        remote combo as well as the code.</p>
 
+      <p>For the actual demostration, I'll use multiple Male to Female Dupont cables to jumper the IR receiver to the
+        board.</p>
 
 
-    <p>Update: Turns out the Iremote library that I was planning on using is too large for the tiny44's flash, I'll have to resort to quickly fabricating a physical push button and LED set up to fufil the IO requirements.  I certainly did not see this issue coming, I probably should have checked the size of the library and the storage available on the Tiny44. </p>
 
-    
 
+      <p>Update: Turns out the Iremote library that I was planning on using is too large for the tiny44's flash, I'll
+        have to resort to quickly fabricating a physical push button and LED set up to fufil the IO requirements. I
+        certainly did not see this issue coming, I probably should have checked the size of the library and the storage
+        available on the Tiny44. </p>
 
 
 
 
 
 
-    <p></p>
 
 
 
-    <p>Insert images here:</p>
+      <p></p>
 
 
 
+      <p>Insert images here:</p>
 
-    <p></p>
 
-    
 
 
+      <p></p>
 
 
 
 
 
-  </div>
 
-</body>>
+
+
+
+    </div>
+
+  </body>>
