@@ -49,7 +49,7 @@
     <img src="IMAGES/CAD TIMELAPSE/BASEPLATE V2 v20 4.png" width=75% class="border">
 
     <iframe src="https://ichat601.autodesk360.com/shares/public/SH919a0QTf3c32634dcf1ab60a0828810ff4?mode=embed"
-    width=75% height=50% allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"
+      width=75% height=50% allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"
       frameborder="0"></iframe>
 
 
@@ -86,54 +86,60 @@
 
     <ol>
 
+      <img src="IMAGES/CNC/CNC1.jpg" width=75%>
+
       <li>I opened up Vcarvepro, created a new canvas with the size of the router, 2400mm by 1200mm. I then imported my
         vectors in the form of .dxfs from my thumbdrive.</li>
 
+      <img src="IMAGES/Vcarvepro/ImportingVectors.png" width=75%>
+
       <li>I arranged my vectors, trying to limit the space between vectors as much as possible to minimise material
-        wastage.</li>
+        wastage. I had to join some of my vectors together using a command, pieces that consist of multiple vectors will
+        not be able to be fillet'ed.</li>
+
+        <img src="IMAGES/Vcarvepro/joiningvectors.png" width=75%>
+
+
+      <li>I selected the appropriate vectors and created a 2D profile toolpath.</li>
 
       <li>Following that, I added dogbones to the appropriate areas through the use of the fillet command, if I recall
         correctly I used 3mm with 15mm thick wood.</li>
 
-      <li>I then added my </li>
+      <img src="IMAGES/Vcarvepro/addingfillets.png" width=75%>
 
-      <li>Now that the tabs and dogbones have been added, I can now generate my toolpath, I generated my toolpath and
-        saved it on my thumbdrive, the file format being .tap</li>
+      <li>I then added my tabs, trying to minimise them whilst ensuring that the wood being cut will not become loose as
+        each tab will have to be chiseled out, resulting in more time spent. </li>
+
+      <img src="IMAGES/Vcarvepro/addingtabs.png" width=75%>
+
+      <li>Now that the tabs and dogbones have been added, I can now generate my toolpath. I generated my toolpath and
+        saved it on my thumbdrive, the file format being .tap. The toolpath can also be previewed with a simulation of
+        the tool cutting the material.</li>
+
+      <img src="IMAGES/CNC/CNC2.jpg" width=75%>
 
       <li>Using NC-EASY, I opened up my .tab file:</li>
 
-      <li>I then moved the </li>
+      <li>I then calibrated the cnc router, with its X and Y. Being the first person to cut for the day, I set it
+        roughly to the bottom left of the router, around 10,10.</li>
 
-      <li></li>
+      <li>Calibrating the Y is slightly different, I had to input the X and Y position for where the router would take a
+        measurement. This means that the router would move to say for example 100, 100 and press down. This means that
+        the Z sensor has to be a position 100,100 or the router could potentially miss the z calibration sensor,
+        damaging the bit and machine bed.</li>
 
+      <li>After ensuring the </li>
 
+      <li>Now that the X, Y and Z axis have been set, I can run the toolpath.</li>
+
+      <img src="IMAGES/CNC/CNC3.jpg" width=75%>
+
+      <li>After cutting, I had to use a chisel and a mallet to remove the tabs attached to the wood.</li>
+
+      <li>Lastly, the wood </li>
+
+      <img src="IMAGES/CNC/CNC4.jpg" width=75%>
     </ol>
-
-
-
-    <p>I didn't take many pictures due to the nature of the workshop but here are the images:</p>
-
-    <p>Here's an image of the cnc router:</p>
-
-    <img src="IMAGES/CNC/CNC1.jpg" width=75%>
-
-    <p></p>
-
-    <img src="IMAGES/CNC/CNC2.jpg" width=75%>
-
-    <p></p>
-
-    <img src="IMAGES/CNC/CNC3.jpg" width=75%>
-
-    <img src="IMAGES/CNC/CNC4.jpg" width=75%>
-
-    <p>After </p>
-
-
-
-
-    <p>After cutting the pieces, I </p>
-
 
 
     <h2>Assembly</h2>
@@ -147,8 +153,6 @@
     <p>Here's an image of the completed stand with my incomplete turbine sitting on top of it:</p>
 
     <img src="IMAGES/3DPrinting/3D12.jpg" width=75%>
-
-    <p></p>
 
 
 
